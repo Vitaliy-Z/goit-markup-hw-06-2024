@@ -28,30 +28,20 @@ body {
   text-transform: uppercase;
   color: #4d5ae5;
 }
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
-/* .section-title {
+.section-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
-} */
+}
 .card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #2e2f42;
 }
 .card-text {
@@ -86,11 +76,8 @@ body {
   background-color: #2e2f42;
 }
 .hero-title {
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 0.02em;
-  text-align: center;
   color: #fff;
 }
 
@@ -109,15 +96,6 @@ body {
 }
 
 /* ===== PREFERENCES STYLES ===== */
-.preferences-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-  color: #2e2f42;
-}
 .preferences-item-title {
   font-weight: 500;
   font-size: 20px;
@@ -137,29 +115,12 @@ body {
 .team-item {
   background-color: #ffffff;
 }
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-  color: #2e2f42;
-}
 .team-item {
   text-align: center;
 }
 
 /* ===== PORTFOLIO STYLES ===== */
-.portfolio-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-  color: #2e2f42;
-}
+
 /* ===== FOOTER STYLES ===== */
 .page-footer {
   background-color: #2e2f42;
