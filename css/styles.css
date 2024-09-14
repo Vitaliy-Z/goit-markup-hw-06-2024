@@ -94,7 +94,9 @@ section {
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 76px;
+}
+.header-nav .logo {
+  margin-right: 76px;
 }
 .page-header .logo-part {
   color: #2e2f42;
@@ -136,7 +138,7 @@ section {
 }
 .hero-title {
   margin: 0 auto 48px;
-  max-width: 500px;
+  max-width: 496px;
   font-size: 56px;
   line-height: 1.07;
   color: #fff;
@@ -144,6 +146,7 @@ section {
 }
 .btn-hero-order {
   display: block;
+  min-width: 169px;
   margin: 0 auto;
   padding: 16px 32px;
   font-weight: 500;
@@ -166,12 +169,13 @@ section {
 .preferences-list {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 .preferences-item {
   max-width: calc((100% - 24px * 3) / 4);
 }
 .preferences-item-title {
-  margin-bottom: 19px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -190,6 +194,7 @@ section {
 .team-list {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 .team-item {
   max-width: calc((100% - 24px * 3) / 4);
@@ -209,7 +214,7 @@ section {
   object-fit: cover;
 }
 .team-item-descr {
-  padding: 32px 16px;
+  padding: 32px 0px;
 }
 
 /* ===== PORTFOLIO STYLES ===== */
@@ -221,7 +226,6 @@ section {
 }
 .portfolio-item {
   max-width: calc((100% - 24px * 2) / 3);
-  border: 1px solid #e7e9fc;
 }
 .portfolio-card-thumb {
   height: 300px;
@@ -234,23 +238,24 @@ section {
 }
 .portfolio-item-descr {
   padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 /* ===== FOOTER STYLES ===== */
 .page-footer {
-  padding: 100px;
+  padding: 100px 0;
   background-color: #2e2f42;
 }
-.footer-copywrite {
-  max-width: 264px;
-}
 .page-footer .logo {
+  display: inline-block;
   margin-bottom: 16px;
 }
 .page-footer .logo-part {
   color: #f4f4fd;
 }
 .footer-text {
+  max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
   color: #f4f4fd;
