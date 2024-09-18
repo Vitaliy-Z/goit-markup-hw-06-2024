@@ -70,6 +70,9 @@ section {
   line-height: 1.5;
   color: #434455;
 }
+.social-link {
+  fill: #ffffff;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -86,6 +89,8 @@ section {
 /* ===== HEADER STYLES ===== */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header .container {
   display: flex;
@@ -151,14 +156,18 @@ section {
 
 /* ===== HERO STYLES ===== */
 .hero-section {
+  margin: 0 auto;
   padding: 188px 0;
+  max-width: 1440px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg.png);
+    url(../images/hero-bg.jpg);
+
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 .hero-title {
@@ -204,16 +213,14 @@ section {
   max-width: calc((100% - 24px * 3) / 4);
 }
 .preferences-item .icon-tumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   margin-bottom: 8px;
-  padding: 24px 0;
-  text-align: center;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-}
-.preferences-item .icon-tumb svg {
-  width: 64px;
-  height: 64px;
 }
 .preferences-item-title {
   margin-bottom: 8px;
@@ -255,15 +262,16 @@ section {
   object-fit: cover;
 }
 .team-item-descr {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team-card-text {
   margin-bottom: 8px;
 }
 .team-item-social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 .team-item .link-icon-tumb {
   display: flex;
@@ -273,17 +281,14 @@ section {
   background-color: #4d5ae5;
   border-radius: 50%;
 }
-.team-item .link-icon-tumb svg {
-  width: 16px;
-  height: 16px;
-  fill: #ffffff;
-}
+
 /* hover/focus */
 .team-item .link-icon-tumb {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-item .link-icon-tumb:hover {
-  background-color: #31d0aa;
+.team-item .link-icon-tumb:hover,
+.team-item .link-icon-tumb:focus {
+  background-color: #404bbf;
 }
 
 /* ===== PORTFOLIO STYLES ===== */
@@ -331,6 +336,13 @@ section {
 .portfolio-item:hover .portfolio-card-overlay {
   transform: translate(0);
 }
+.portfolio-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 /* ===== FOOTER STYLES ===== */
 .page-footer {
@@ -339,8 +351,11 @@ section {
 }
 .page-footer .container {
   display: flex;
-  align-items: flex-start;
-  gap: 120px;
+  align-items: baseline;
+  /* gap: 120px; */ /* I think this is a better method !!! */
+}
+.footer-logo {
+  margin-right: 120px;
 }
 .page-footer .logo {
   display: inline-block;
@@ -360,7 +375,7 @@ section {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
+  color: #ffffff;
 }
 .footer-social-list {
   display: flex;
@@ -374,15 +389,12 @@ section {
   background-color: #4d5ae5;
   border-radius: 50%;
 }
-.footer-social-item .link-icon-tumb svg {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-}
+
 /* hover/focus */
 .footer-social-item .link-icon-tumb {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-item .link-icon-tumb:hover {
+.footer-social-item .link-icon-tumb:hover,
+.footer-social-item .link-icon-tumb:focus {
   background-color: #31d0aa;
 }
