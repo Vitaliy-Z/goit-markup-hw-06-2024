@@ -528,7 +528,7 @@ textarea {
 .modal-input-box {
   margin-bottom: 8px;
 }
-.modal-input-box:last-child {
+.modal-form-textarea {
   margin-bottom: 16px;
 }
 .modal-form-label {
