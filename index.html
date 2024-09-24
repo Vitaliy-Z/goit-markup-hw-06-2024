@@ -450,13 +450,15 @@
         <div class="footer-subscribe">
           <p class="footer-title">Subscribe</p>
           <form class="footer-subscribe-form">
-            <input
-              type="email"
-              class="footer-form-input"
-              placeholder="E-mail"
-              name="user-subscribe-emeil"
-            />
-            <button class="btn-subscribe" type="submit">
+            <label class="footer-form-label">
+              <input
+                type="email"
+                class="footer-form-input"
+                placeholder="E-mail"
+                name="user-subscribe-email"
+              />
+            </label>
+            <button class="btn-subscribe" type="submit" data-subscribe>
               Subscribe
               <svg width="24" height="24" class="icon-btn-subscribe">
                 <use href="./images/icons.svg#icon-telegram"></use>
@@ -561,13 +563,17 @@
         // Додати атрибут data-modal на бекдроп модалки
         modal: document.querySelector("[data-modal]"),
 
-        sendFormBtn: document.querySelector("[data-send-form]")
+        sendFormBtn: document.querySelector("[data-send-form]"),
+        subscribeBtn: document.querySelector("[data-subscribe]")
       };
       refs.openModalBtn.addEventListener("click", toggleModal);
       refs.closeModalBtn.addEventListener("click", toggleModal);
 
       refs.sendFormBtn.addEventListener("click", (e) => {
         e.preventDefault(), toggleModal();
+      });
+      refs.subscribeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
       });
       refs.modal.addEventListener("click", (e) => {
         if (e.target === refs.modal) {
