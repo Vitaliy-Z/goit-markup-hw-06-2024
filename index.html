@@ -53,6 +53,80 @@
             </li>
           </ul>
         </address>
+        <button class="btn-mob-menu-open" type="button" data-mob-menu-open>
+          <svg width="24" height="24" class="icon-mob-menu-open">
+            <use href="./images/icons.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mob-menu-wrapper" data-mob-menu>
+        <div class="mob-menu">
+          <button class="btn-mob-menu-close" type="button" data-mob-menu-close>
+            <svg class="icon-mob-menu-btn-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mob-nav">
+            <ul class="mob-nav-list">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link current-link">Studio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./portfolio.html" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./contacts.html" class="nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mob-contacts">
+            <ul class="contacts-list">
+              <li class="contacts-item">
+                <a
+                  href="tel:+110001111111"
+                  class="contacts-link current-contact"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contacts-item">
+                <a href="mailto:info@devstudio.com" class="contacts-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="header-social-list">
+            <li class="header-social-item">
+              <a href="#" class="link-icon-tumb">
+                <svg width="24" height="24" class="social-link">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-social-item">
+              <a href="#" class="link-icon-tumb">
+                <svg width="24" height="24" class="social-link">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-social-item">
+              <a href="#" class="link-icon-tumb">
+                <svg width="24" height="24" class="social-link">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-social-item">
+              <a href="#" class="link-icon-tumb">
+                <svg width="24" height="24" class="social-link">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -62,16 +136,16 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="section-title hero-title">
-            Effective Solutions for Your Business
+            Efective Solutions for Your Business
           </h1>
-          <button type="button" class="btn-hero-order" data-modal-open>
+          <button class="btn-hero-order" type="button" data-modal-open>
             Order Service
           </button>
         </div>
       </section>
 
       <!-- Preferences Section -->
-      <section class="preferences-section">
+      <!-- <section class="preferences-section">
         <div class="container">
           <h2 class="section-title preferences-title visually-hidden">
             Our Preferences
@@ -127,10 +201,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Team Section -->
-      <section class="team-section">
+      <!-- <section class="team-section">
         <div class="container">
           <h2 class="section-title team-title">Our Team</h2>
           <ul class="team-list">
@@ -302,10 +376,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Portfolio Section -->
-      <section class="portfolio-section">
+      <!-- <section class="portfolio-section">
         <div class="container">
           <h2 class="section-title portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -399,11 +473,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Page Footer -->
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
       <div class="container">
         <div class="footer-logo">
           <a href="./index.html" class="logo"
@@ -467,10 +541,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal -->
-    <div class="modal-overlay" data-modal>
+    <!-- <div class="modal-overlay" data-modal>
       <div class="modal-container">
         <button class="btn-close" type="button" data-modal-close>
           <svg class="icon-btn-close" width="8" height="8">
@@ -557,37 +631,43 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script>
       const refs = {
-        // Додати атрибут data-modal-open на кнопку відкриття
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        // Додати атрибут data-modal-close на кнопку закриття
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        // Додати атрибут data-modal на бекдроп модалки
+        mobMenu: document.querySelector("[data-mob-menu]"),
+        openMobMenuBtn: document.querySelector("[data-mob-menu-open]"),
+        closeMobMebuBtn: document.querySelector("[data-mob-menu-close]"),
+
         modal: document.querySelector("[data-modal]"),
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
 
         sendFormBtn: document.querySelector("[data-send-form]"),
         subscribeBtn: document.querySelector("[data-subscribe]")
       };
+      refs.openMobMenuBtn.addEventListener("click", toggleMobMenu);
+      refs.closeMobMebuBtn.addEventListener("click", toggleMobMenu);
+
       refs.openModalBtn.addEventListener("click", toggleModal);
       refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.sendFormBtn.addEventListener("click", (e) => {
-        e.preventDefault(), toggleModal();
-      });
-      refs.subscribeBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-      });
       refs.modal.addEventListener("click", (e) => {
         if (e.target === refs.modal) {
           toggleModal();
         }
+
+        refs.sendFormBtn.addEventListener("click", (e) => {
+          e.preventDefault(), toggleModal();
+        });
+        refs.subscribeBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+        });
       });
       function toggleModal() {
-        // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
         refs.modal.classList.toggle("is-open");
+      }
+      function toggleMobMenu() {
+        refs.mobMenu.classList.toggle("is-open");
       }
     </script>
   </body>
