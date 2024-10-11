@@ -79,8 +79,8 @@ textarea {
   resize: none;
 }
 .container {
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 310px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -194,7 +194,10 @@ textarea {
 }
 .mob-menu {
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 420px;
+  height: 100%;
   margin: 0 auto;
   padding: 72px 24px 40px 16px;
 }
@@ -214,7 +217,7 @@ textarea {
   fill: #2e2f42;
 }
 .mob-nav {
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 .mob-nav-list {
   display: flex;
@@ -359,6 +362,8 @@ textarea {
 */
 .hero-section {
   padding: 72px 0;
+  margin: 0 auto;
+  max-width: var(--mobile-min-width);
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -411,6 +416,7 @@ textarea {
 /* =======  HERO TABLET  =======*/
 @media screen and (min-width: 768px) {
   .hero-section {
+    max-width: var(--tablet-min-width);
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -437,7 +443,6 @@ textarea {
 /* =======  HERO DESCTOP  =======*/
 @media screen and (min-width: 1158px) {
   .hero-section {
-    margin: 0 auto;
     max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(
